@@ -7,8 +7,8 @@ interface Props {
 export default function ListGroup({ items, heading, handleClick }: Props) {
   return (
     <>
-      <h2>{heading}</h2>
-      <ul>
+      <h2 className="font-black text-lg mb-3">{heading}</h2>
+      <ul className="mb-3">
         {items.map((item, index) => (
           <li key={item} onClick={() => handleClick(item, index)}>
             {item}

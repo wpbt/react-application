@@ -8,8 +8,8 @@ interface Props {
 export default function Alert({ title, children }: Props) {
   return (
     <>
-      <h2>{title}</h2>
-      <div>{children}</div>
+      <h2 className="font-black text-lg mb-3">{title}</h2>
+      <div className="mb-3">{children}</div>
     </>
   );
 }

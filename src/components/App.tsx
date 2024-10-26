@@ -1,4 +1,5 @@
 import Alert from "./Alert";
+import ImmerExample from "./ImmerExample";
 import ListGroup from "./ListGroup";
 
 export default function App() {
@@ -10,7 +11,9 @@ export default function App() {
 
   return (
     <>
-      <h1>React Application Sections</h1>
+      <h1 className="font-black text-[32px] mb-3">
+        React Application Sections
+      </h1>
       <ListGroup
         items={items}
         heading="List Group Demo"
@@ -20,6 +23,8 @@ export default function App() {
         <h4>Some HTML</h4>
         <p>Some nothing content</p>
       </Alert>
+
+      <ImmerExample title="Simplifying Working with Objects using Immer" />
     </>
   );
 }

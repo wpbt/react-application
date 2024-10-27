@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { produce } from "immer";
+import LinkInfo from "./LinkInfo";
 
 interface Props {
   title: string;
@@ -23,7 +24,7 @@ export default function ImmerExample({ title }: Props) {
 
   const handleFix = (bug: Bug) => {
     setBugs(
-      produce(bugs, (draft) => {
+      produce((draft) => {
         let result = draft.find((item) => item.id === bug.id);
         if (result) {
           result.fixed = true;
@@ -33,17 +34,17 @@ export default function ImmerExample({ title }: Props) {
   };
 
   const handleDelete = (bug: Bug) => {
-    setBugs(
-      produce(bugs, (draft) => draft.filter((item) => item.id !== bug.id))
-    );
+    setBugs(produce((draft) => draft.filter((item) => item.id !== bug.id)));
   };
 
   return (
     <>
-      <h2 className="font-black text-lg mb-3">{title}</h2>
-      {bugs.length === 0 && <p className="mb-3">No bugs info.</p>}
+      <h2 className="font-black text-lg my-8 bg-black text-white px-2 rounded-lg py-1">
+        {title}
+      </h2>
+      {bugs.length === 0 && <p className="mb-3 px-2">No bugs info.</p>}
       {bugs.length !== 0 && (
-        <ul className="mb-3">
+        <ul className="mb-3 px-2">
           {bugs.map((bug) => (
             <li key={bug.id} className="border-b border-black mb-3 pb-2">
               <p>Title: {bug.title}</p>
@@ -68,6 +69,9 @@ export default function ImmerExample({ title }: Props) {
           ))}
         </ul>
       )}
+      <div className="mb-3 px-2">
+        <LinkInfo url="https://immerjs.github.io/immer" content="Immer" />
+      </div>
     </>
   );
 }

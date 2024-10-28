@@ -1,17 +1,18 @@
+import HeadingThird from "../elements/HeadingThird";
+import HeadingTwo from "../elements/HeadingTwo";
+import ToDoRQ from "./ToDoRQ";
 import ToDoUseEffect from "./ToDoUseEffect";
 
 export default function ReactQueryComp() {
   return (
     <>
-      <h2 className="font-black text-lg my-8 bg-black text-white px-2 rounded-lg py-1">
-        React Query Demonstration
-      </h2>
+      <HeadingTwo title="React Query Demonstration" />
 
       <div className="mb-3">
-        <h3 className="text-lg mb-3 text-md text-white font-semibold bg-slate-600 px-2 rounded-lg py-1">
-          To-do list fetching using useEffect() in React
-        </h3>
+        <HeadingThird title="To-do (it's actually users) list fetching using useEffect() in React" />
         <ToDoUseEffect />
+        <HeadingThird title="To-do (it's actually users) list fetching using React Query" />
+        <ToDoRQ />
       </div>
     </>
   );

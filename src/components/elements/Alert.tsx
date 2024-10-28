@@ -1,4 +1,5 @@
 import { ReactNode } from "react";
+import HeadingTwo from "./HeadingTwo";
 
 interface Props {
   title: string;
@@ -8,9 +9,7 @@ interface Props {
 export default function Alert({ title, children }: Props) {
   return (
     <>
-      <h2 className="font-black text-lg my-8 bg-black text-white px-2 rounded-lg py-1">
-        {title}
-      </h2>
+      <HeadingTwo title={title} />
       <div className="mb-3 px-2">{children}</div>
     </>
   );

@@ -1,6 +1,7 @@
 import axios, { CanceledError } from "axios";
 import { useEffect, useState } from "react";
 import LinkInfo from "./LinkInfo";
+import HeadingTwo from "./HeadingTwo";
 
 interface User {
   id: number;
@@ -39,9 +40,7 @@ export default function BackendService() {
 
   return (
     <>
-      <h2 className="font-black text-lg my-8 bg-black text-white px-2 rounded-lg py-1">
-        Connecting to a Backend (Fake)
-      </h2>
+      <HeadingTwo title="Connecting to a Backend (Fake)" />
       <div className="mb-3 px-2">
         {users.length !== 0 ? (
           <ul className="list-disc text-sm px-5">

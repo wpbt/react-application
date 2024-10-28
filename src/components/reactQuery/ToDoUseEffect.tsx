@@ -3,9 +3,7 @@ import { useEffect, useState } from "react";
 
 interface Todo {
   id: number;
-  title: string;
-  userId: number;
-  completed: boolean;
+  name: string;
 }
 
 export default function ToDoUseEffect() {
@@ -14,7 +12,7 @@ export default function ToDoUseEffect() {
 
   useEffect(() => {
     axios
-      .get("https://jsonplaceholder.typicode.com/todos")
+      .get("https://jsonplaceholder.typicode.com/users")
       .then((res) => setTodos(res.data))
       .catch((error) => setError(error));
   }, []);
@@ -23,9 +21,9 @@ export default function ToDoUseEffect() {
 
   return (
     <div className="mb-3 px-2">
-      <ul className="list-group text-sm list-disc ml-5 mb-3">
+      <ul className="list-group text-xs list-disc ml-5 mb-3">
         {todos.map((todo) => (
-          <li key={todo.id}>{todo.title}</li>
+          <li key={todo.id}>{todo.name}</li>
         ))}
       </ul>
       <p className="mb-3 text-sm font-semibold">Count: {todos.length}</p>

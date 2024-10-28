@@ -1,5 +1,6 @@
 import { FormEvent, useRef, useState } from "react";
 import LinkInfo from "./LinkInfo";
+import HeadingTwo from "./HeadingTwo";
 
 export default function MyForm() {
   const textInputRef = useRef<HTMLInputElement>(null);
@@ -18,9 +19,7 @@ export default function MyForm() {
   };
   return (
     <>
-      <h2 className="font-black text-lg my-8 bg-black text-white px-2 rounded-lg py-1">
-        Working with form
-      </h2>
+      <HeadingTwo title="Working with form" />
       <div className="mb-3 px-2">
         <form onSubmit={handleSubmit}>
           <div>

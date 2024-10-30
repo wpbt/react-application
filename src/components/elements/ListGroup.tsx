@@ -1,18 +1,23 @@
 import HeadingTwo from "./HeadingTwo";
+import { items } from "./../../services/data";
 
-interface Props {
-  items: string[];
-  heading: string;
-  handleClick: (item: string, index: number) => void;
-}
+export default function ListGroup() {
+  let data = items();
 
-export default function ListGroup({ items, heading, handleClick }: Props) {
+  const handleClick = (item: string, index: number) => {
+    console.log(`Value: ${item}, Index: ${index}`);
+  };
+
   return (
     <>
-      <HeadingTwo title={heading} />
+      <HeadingTwo title="List Group Demo: Array.map()" />
       <ul className="mb-3 list-disc text-sm px-5">
-        {items.map((item, index) => (
-          <li key={item} onClick={() => handleClick(item, index)}>
+        {data.map((item, index) => (
+          <li
+            className="cursor-pointer"
+            key={item}
+            onClick={() => handleClick(item, index)}
+          >
             {item}
           </li>
         ))}

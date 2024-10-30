@@ -6,7 +6,7 @@ interface Props {
 
 export default function LinkInfo({ linkTitle = "Link", url, content }: Props) {
   return (
-    <p className="flex w-max items-center text-sm font-semibold my-3 mb-3 bg-orange-700 text-white rounded px-2 py-1">
+    <p className="flex w-max items-center text-sm font-semibold my-6 bg-orange-700 text-white rounded px-2 py-1">
       {linkTitle}:{" "}
       <a
         className="font-normal bg-black px-2 py-1 rounded-lg ms-2"

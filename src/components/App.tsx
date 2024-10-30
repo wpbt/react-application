@@ -1,28 +1,23 @@
-import Alert from "./elements/Alert";
-import BackendService from "./elements/BackendService";
-import Footer from "./elements/Footer";
-import Header from "./elements/Header";
-import ImmerExample from "./elements/ImmerExample";
-import ListGroup from "./elements/ListGroup";
-import MyForm from "./elements/MyForm";
-import ReactQueryComp from "./reactQuery/ReactQueryComp";
+import {
+  StateHooks,
+  Alert,
+  BackendService,
+  Footer,
+  Header,
+  ImmerExample,
+  ListGroup,
+  MyForm,
+  ReactQueryComp,
+} from "./Index";
 
 export default function App() {
-  let items = ["Item A", "Item B", "Item C", "Item D", "Item E"];
-
-  const handleClick = (item: string, index: number) => {
-    console.log(item, index);
-  };
-
   return (
     <>
       <Header />
 
-      <ListGroup
-        items={items}
-        heading="List Group Demo: Array.map()"
-        handleClick={handleClick}
-      />
+      <StateHooks />
+
+      <ListGroup />
 
       <Alert title="Passing Children to Components">
         <h4>Some HTML (its a h2 tag)</h4>

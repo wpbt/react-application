@@ -1,3 +1,4 @@
+import LinkInfo from "../elements/LinkInfo";
 import useToDo from "./hooks/useToDo";
 
 export default function ToDoRQ() {
@@ -19,6 +20,8 @@ export default function ToDoRQ() {
         ))}
       </ul>
       <p className="mb-3 text-sm font-semibold">Count: {data?.data.length}</p>
+
+      <LinkInfo content="React Query" url="https://tanstack.com/query/latest" />
     </div>
   );
 }

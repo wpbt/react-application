@@ -9,9 +9,9 @@ export default function ReactQueryComp() {
       <HeadingTwo title="React Query Demonstration" />
 
       <div className="mb-3">
-        <HeadingThird title="To-do (it's actually users) list fetching using useEffect() in React" />
+        <HeadingThird title="Users list fetching using useEffect() in React" />
         <ToDoUseEffect />
-        <HeadingThird title="To-do (it's actually users) list fetching using React Query" />
+        <HeadingThird title="Users list fetching using React Query" />
         <ToDoRQ />
       </div>
     </>

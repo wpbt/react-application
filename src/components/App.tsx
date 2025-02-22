@@ -8,6 +8,7 @@ import {
   ListGroup,
   MyForm,
   ReactQueryComp,
+  Editor,
 } from "./Index";
 
 export default function App() {
@@ -31,6 +32,10 @@ export default function App() {
       <BackendService />
 
       <ReactQueryComp />
+
+      <div className="tiptap-wrapper">
+        <Editor />
+      </div>
 
       <Footer />
     </>

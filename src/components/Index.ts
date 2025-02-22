@@ -7,3 +7,4 @@ export { default as ImmerExample } from "./elements/ImmerExample";
 export { default as ListGroup } from "./elements/ListGroup";
 export { default as MyForm } from "./elements/MyForm";
 export { default as ReactQueryComp } from "./reactQuery/ReactQueryComp";
+export { default as Editor } from "./editor/Editor";
